@@ -1,5 +1,5 @@
 <?php
-$servername="localhost";
+$servername="mysql";
 $username="kenta";
 $password="Kent@2428";
 $dbname="raspi3";
