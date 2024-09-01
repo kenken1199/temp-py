@@ -1,7 +1,17 @@
 version: "3"
 services:
   nginx:
-  # ...
+    image: nginx:1.25.0
+    ports:
+      - 8000:80
+    volumes:
+      # ./srcフォルダをコンテナ内の/var/www/htmlにマウント
+      - ./src:/var/www/html
+      # ./docker/nginxフォルダをコンテナ内の/etc/nginx/conf.dにマウント
+      - ./docker/nginx:/etc/nginx/conf.d
+    # 依存関係を設定
+    depends_on:
+      - app
   app:
     build:
       context: ./docker/php
