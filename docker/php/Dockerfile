@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y \
 	curl \
 	zip \
 	unzip \
-    && docker-php-ext-install php-mysqli
+    && docker-php-ext-install mysqli
 
 # 作業ディレクトリを/var/wwwに設定
 WORKDIR /var/www
