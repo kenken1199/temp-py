@@ -30,7 +30,7 @@ services:
   # MySQLの定義
   mysql:
     # MySQL コンテナに使用するイメージを指定
-    image: mysql:5.7
+    image: mysql:8.0
     # コンテナ内で使用される環境変数を定義
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
