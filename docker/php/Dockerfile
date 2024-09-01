@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y \
 	curl \
 	zip \
 	unzip \
-    && docker-php-ext-install pdo_mysql
+    && docker-php-ext-install php-mysqli
 
 # 作業ディレクトリを/var/wwwに設定
 WORKDIR /var/www
